@@ -1,7 +1,9 @@
-package dataProcess;
+package model;
 
+import java.io.Serializable;
 import java.util.Date;
-/**
+/**	
+ * 		public class userData implements Cloneable , Serializable
  * 	 * @param comment_count
 	 * @param like_count
 	 * @param forward_count
@@ -12,7 +14,11 @@ import java.util.Date;
  * @author coco1
  *
  */
-public class userData {
+public class userData implements  Cloneable , Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int comment_count;
 	private int like_count;
 	private int forward_count;
@@ -38,10 +44,10 @@ public class userData {
 		this.setMid(mid);
 		this.setUid(uid);
 		this.setTime(time);
-		System.out.println("新建一条微博对象，微博发博时间：" + this.time.toString() +"\n博主号："+this.uid+"\n此条微博号："+this.mid+ 
-				"\n转发数"+ this.forward_count+"\n点赞数："+ this.like_count + "\n评论数"+this.comment_count+"\n微博内容："+
-				this.content);
-		System.out.println("------------------------------next---------------------------------");
+//		System.out.println("新建一条微博对象，微博发博时间：" + this.time.toString() +"\n博主号："+this.uid+"\n此条微博号："+this.mid+ 
+//				"\n转发数"+ this.forward_count+"\n点赞数："+ this.like_count + "\n评论数"+this.comment_count+"\n微博内容："+
+//				this.content);
+//		System.out.println("------------------------------next---------------------------------");
 		
 	}
 	public static void main(String args[])
